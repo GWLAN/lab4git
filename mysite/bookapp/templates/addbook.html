@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>addbook</title>
+<meta charset="utf-8">
+<style type="text/css">
+body {
+	background-image: url(../static/img/2.jpg);
+}
+</style>
+</head>
+<body>
+	<div class="add">
+		<h3 align="center">update book</h3>
+		<form action="/addbook" method="post">  
+		  <p>&nbsp;</p>
+	      
+		        <tr>
+		          <td width="150">book name </td>
+                   &nbsp  &nbsp  
+		          <td width="168"><input name="book_name" type="text" value={{book.Title}}></td>
+            </tr>
+            <br>
+	        <tr>
+	          <td width="150">ISBN </td>
+               &nbsp  &nbsp  &nbsp  &nbsp &nbsp &nbsp
+	          <td width="168"><input name="book_ISBN" type="text" value={{book.ISBN}}></td>
+            </tr>
+            <br>
+	        <tr>
+	          <td> publisher</td>
+               &nbsp  &nbsp &nbsp &nbsp
+	          <td><input name="book_publisher" type="text" value={{book.Publisher}}></td>
+            </tr>
+            <br>
+	        <tr>
+	          <td>publish date</td>
+               &nbsp &nbsp
+	          <td><input name="book_date" type="text" value={{book.Publishdate}}></td>
+            </tr>
+            <br>
+	        <tr>
+	          <td>price</td>
+              &nbsp  &nbsp  &nbsp  &nbsp &nbsp &nbsp &nbsp 
+	          <td><input name="book_price" type="text" value={{book.Price}}></td>
+            </tr>
+            <br>
+	        <tr>
+	          <td>authorID</td>
+              &nbsp &nbsp &nbsp &nbsp 
+	          <td><input name="book_authorID" type="text" value={{author.AuthorID}}></td>
+            </tr>
+          
+	      <p align="center">
+	        <input type="submit" value="submit" >
+          </p>  
+		</form>  
+	</div>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+    <p align="right">&nbsp; 
+  <button value="返回主页" onclick="window.location.href('../')"> >homepage</button>
+</p>
+</body>
+</html>

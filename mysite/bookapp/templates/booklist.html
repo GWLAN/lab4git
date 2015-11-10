@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>booklist</title>
+<style type="text/css">
+body {
+	background-image: url(../static/img/3.jpg);
+}
+body,td,th {
+	color: #F00;
+	font-size: 18px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<div>
+	  <h1 align="center"> bookinfor</h1>
+	{% for booktest in booklist %}
+	      <div align="center">
+	        <table width="552" border="1">
+	          <tr>
+	            <td width="19">ISBN</td>
+	            <td width="142">{{booktest.ISBN}}</td>
+	            <td width="19">bookname</td>
+	            <td width="135">{{booktest.Title}}</td>
+	            <td width="20">authorID</td>
+	            <td width="177">{{booktest.AuthorID}} </td>
+              </tr>
+            </table>
+            <p>{% endfor %} </p>
+	      </div>
+              </p>
+          <p>&nbsp;</p>
+   <p align="right">     
+  <button value="返回主页" onclick="window.location.href('../')"> >homepage</button> </p>      
+</div>
+</body>
+</html>
