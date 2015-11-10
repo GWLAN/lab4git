@@ -21,48 +21,7 @@ def booklist(request):
 	return render_to_response('booklist.html',{'booklist':booklist})	
     
 
-def addbook0(request):
-	return render_to_response('addbook.html')
-def addbook(request):
-	title = request.POST['book_name']
-	#ISBN = request.POST['book_ISBN']
-	authorID = request.POST['book_authorID']
-	publisher = request.POST['book_publisher']
-	publishdate = request.POST['book_date']
-	price = request.POST['book_price']
-	try:
-		author = Author.objects.get(AuthorID=authorID)
-		BOOK = Book()
-		BOOK.ISBN = request.POST['book_ISBN']
-		BOOK.Title = title
-		BOOK.AuthorID = author
-		BOOK.Publisher =  publisher
-		BOOK.Publishdate = publishdate
-		BOOK.Price = float(price)
-		BOOK.save()
-		return render_to_response('bookinformation.html',{'booktest':BOOK})
-	except Author.DoesNotExist:
-		return render_to_response('addwriter.html')   
 
-def addwriter0(request):
-    return render_to_response('addwriter.html')
-def addwriter(request):
-	AUTHOR = Author()
-	AUTHOR.AuthorID = request.POST['author_ID']
-	AUTHOR.Age = request.POST['author_age']
-	AUTHOR.Country = request.POST['author_country']
-	AUTHOR.Name = request.POST['author_name']
-	AUTHOR.save()
-	AuthorList = Author.objects.all()
-	return render_to_response('addbook.html') 
-
-
-def serchbook0(request):
-	return render_to_response('serchbook.html')
-def serchbook(request):
-	word = request.POST['bookname']
-	try:
-		BookAim = Book.objects.get(Title = word)
 	except Book.DoesNotExist:
 		return render_to_response('addbook.html')
 	else:

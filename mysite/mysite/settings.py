@@ -10,26 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p+x^@a0en0t@yw-_yx9tgy*yikde+&#3=$#8a06rmu35&k+v=k'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-
-TEMPLATE_DIRS = ('./bookapp/',)
-ALLOWED_HOSTS = []
-
-
+# 
 # Application definition
 
 INSTALLED_APPS = (
